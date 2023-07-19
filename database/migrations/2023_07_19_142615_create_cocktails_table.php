@@ -15,16 +15,16 @@ return new class extends Migration
     {
         Schema::create('cocktails', function (Blueprint $table) {
             $table->id();
-            $table->string('strDrink', 200);
-            $table->string('strCategory', 100);
-            $table->string('strAlcoholic', 100);
-            $table->string('strDrinkThumb', 500)->nullable();
-            $table->string('strIngredient1', 200);
-            $table->string('strIngredient2', 250);
-            $table->string('strIngredient3', 300)->nullable();
-            $table->string('strIngredient4', 300)->nullable();
-            $table->string('strIngredient5', 300)->nullable();
-            $table->string('strIngredient6', 300)->nullable();
+            $table->string('nameDrink', 200);
+            $table->string('category', 100);
+            $table->string('alcoholic', 100);
+            $table->string('drinkThumb', 500)->nullable();
+            $table->string('ingredient1', 200);
+            $table->string('ingredient2', 250);
+            $table->string('ingredient3', 300)->nullable();
+            $table->string('ingredient4', 300)->nullable();
+            $table->string('ingredient5', 300)->nullable();
+            $table->string('ingredient6', 300)->nullable();
             $table->timestamps();
         });
     }
