@@ -18,13 +18,14 @@ return new class extends Migration
             $table->string('nameDrink', 200);
             $table->string('category', 100);
             $table->string('alcoholic', 100);
-            $table->string('drinkThumb', 500)->nullable();
-            $table->string('ingredient1', 200);
-            $table->string('ingredient2', 250);
-            $table->string('ingredient3', 300)->nullable();
-            $table->string('ingredient4', 300)->nullable();
-            $table->string('ingredient5', 300)->nullable();
-            $table->string('ingredient6', 300)->nullable();
+            $table->string('glass', 15);
+            $table->string('imgURL', 200)->nullable();
+            $table->string('ingredient_1', 200);
+            $table->string('ingredient_2', 250);
+            $table->string('ingredient_3', 300)->nullable();
+            $table->string('ingredient_4', 300)->nullable();
+            $table->string('ingredient_5', 300)->nullable();
+            $table->string('ingredient_6', 300)->nullable();
             $table->timestamps();
         });
     }
