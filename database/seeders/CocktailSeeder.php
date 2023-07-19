@@ -14,6 +14,14 @@ class CocktailSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $cocktailAPI = new Cocktail();
+        $cocktailQuery = $cocktailAPI->get();
+        $cocktails = $cocktailQuery->getBody();
+        $cocktails = json_decode($cocktails, true);
+        foreach ($cocktails as $cocktail) {
+            return [
+                'nameDrink' => $cocktail['strDrink'],
+            ];
+        }
     }
 }
