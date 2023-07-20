@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nameDrink', 200);
             $table->string('category', 100);
             $table->string('alcoholic', 100);
-            $table->string('glass', 15);
+            $table->string('glass', 50);
             $table->string('imgURL', 200)->nullable();
             $table->string('ingredient_1', 200);
             $table->string('ingredient_2', 250);
