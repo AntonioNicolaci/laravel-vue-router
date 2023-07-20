@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('name', 150);
             $table->string('email', 300);
-            $table->boolean('newsletter');
             $table->text('message');
             $table->timestamps();
         });
