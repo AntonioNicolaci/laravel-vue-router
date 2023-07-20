@@ -15,7 +15,6 @@ class EmailController extends Controller
         'name'          => 'required|string|max:150',
         'email'         => 'required|email|max:300',
         'message'       => 'required|string',
-        'newsletter'    => 'required|boolean'
     ];
 
     public function store(Request $request)
@@ -35,7 +34,6 @@ class EmailController extends Controller
         $newEmail->name              = $data['name'];
         $newEmail->email             = $data['email'];
         $newEmail->message           = $data['message'];
-        $newEmail->newsletter        = $data['newsletter'];
         $newEmail->save();
 
         Mail::to($newEmail->email)->send(new NewContact($newEmail));
