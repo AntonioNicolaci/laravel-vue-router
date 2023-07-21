@@ -25,7 +25,7 @@ class NewContact extends Mailable
         return new Envelope(
 
             replyTo: $this->email->email,
-            subject: 'Abbiamo ricevuto la tua richiesta'  . $this->email->name,
+            subject: 'Abbiamo ricevuto la tua richiesta '  . $this->email->name,
 
 
         );
