@@ -10,11 +10,13 @@ class CocktailController extends Controller
 {
     public function index(Request $request)
     {
+        $searchString = $request->query('q');
         $searchCategory = $request->query('category', '');
 
-        $cocktails = Cocktail::where('category', 'LIKE', "%{$searchCategory}%")->paginate(6);
+        $cocktails = Cocktail::where('nameDrink', 'LIKE', "%{$searchString}%")
+            ->where('category', 'LIKE', "%{$searchCategory}%")
+            ->paginate(6);
 
         return response()->json($cocktails);
-
     }
 }
